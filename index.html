@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home gravity Club | 집가고싶다</title>
   <style>
     body {
@@ -10,53 +11,64 @@
       margin: 0;
       padding: 20px;
     }
+
     header {
       text-align: center;
       padding: 10px;
       font-size: 14px;
       color: #333;
     }
+
     h2 {
       color: #333;
     }
+
     select, input[type="text"], input[type="button"] {
       padding: 8px;
       border-radius: 6px;
       border: 1px solid #ccc;
       margin: 5px 0;
     }
+
     fieldset {
       border: 2px dashed #555;
       padding: 15px;
       margin-top: 20px;
       background-color: #f9f9f9;
     }
+
     legend {
       font-weight: bold;
       color: #444;
     }
+
     table {
       margin-top: 10px;
     }
+
     input[type="radio"] {
       margin-right: 5px;
     }
+
     footer {
       margin-top: 40px;
       text-align: center;
       font-size: 13px;
       color: #666;
     }
+
     .search-container {
       margin-top: 20px;
       text-align: center;
     }
+
     .search-container input[type="text"] {
       width: 200px;
       padding: 8px;
       border-radius: 20px;
       border: 1px solid #aaa;
     }
+
     .search-container input[type="submit"] {
       padding: 8px 16px;
       border-radius: 20px;
@@ -64,6 +76,40 @@
       color: white;
       border: none;
       cursor: pointer;
+    }
+
+    /* ✅ 모바일 반응형 스타일 */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      header,
+      footer {
+        font-size: 12px;
+        text-align: center;
+      }
+
+      h2, h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      select, input[type="text"], input[type="button"], input[type="submit"] {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      td {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+      }
     }
   </style>
   <script>
@@ -92,7 +138,7 @@
   <header>
     <small>박터연이 이끄는 집중력(Home gravity) Club 공식 홈페이지에 오신 걸 환영합니다.</small>
   </header>
-  
+
   <hr>
 
   <h2>집가면 하고 싶은 것이 있나요?</h2>
@@ -153,4 +199,5 @@
 
 </body>
 </html>
+
 
