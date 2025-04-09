@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Home gravity Club | 집가고싶다</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+    h2 {
+      color: #333;
+    }
+    select, input[type="text"], input[type="button"] {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 5px 0;
+    }
+    fieldset {
+      border: 2px dashed #555;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+    }
+    legend {
+      font-weight: bold;
+      color: #444;
+    }
+    table {
+      margin-top: 10px;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+    .search-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .search-container input[type="text"] {
+      width: 200px;
+      padding: 8px;
+      border-radius: 20px;
+      border: 1px solid #aaa;
+    }
+    .search-container input[type="submit"] {
+      padding: 8px 16px;
+      border-radius: 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    alert('너도 집에 가고 싶구나?');
+
+    function showJoinAlert() {
+      alert('가입이 완료되었습니다! 추카티비 🎉');
+    }
+
+    function reactToHomeWish() {
+      const selected = document.getElementById('course').value;
+      const custom = document.getElementById('custom').value;
+
+      let result = custom.trim() !== "" ? custom : selected;
+
+      if (result === "") {
+        alert("너 간절하지가 않구나");
+      } else {
+        alert(`아 미친 그니까 ㅋㅋㅋ 개큰 인정\n"${result}" <- 이거디;;`);
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <small>박터연이 이끄는 집중력(Home gravity) Club 공식 홈페이지에 오신 걸 환영합니다.</small>
+  </header>
+  
+  <hr>
+
+  <h2>집가면 하고 싶은 것이 있나요?</h2>
+  <select name="course" id="course">
+    <optgroup label="휴식">
+      <option value="개꿀잠 자기">개꿀잠 자기</option>
+      <option value="팔자 좋게 누워서 유튜브 시청">팔자 좋게 누워서 유튜브 시청</option>
+      <option value="게임">게임</option>
+    </optgroup>
+    <optgroup label="식사">
+      <option value="가성비 레전드 집밥 해먹기">가성비 레전드 집밥 해먹기</option>
+      <option value="조금 사치스럽게 집밥 해먹기">조금 사치스럽게 집밥 해먹기</option>
+      <option value="배달음식">배달음식</option>
+    </optgroup>
+  </select><br>
+
+  <input type="text" id="custom" placeholder="직접 입력해 주세요"><br>
+  <input type="button" value="제출" onclick="reactToHomeWish()"><br>
+
+  <div class="search-container">
+    <h3>다른 사람들의 집중력 비법이 궁금하다면?</h3>
+    <form>
+      <input type="text" placeholder="검색어를 입력하세요">
+      <input type="submit" value="검색">
+    </form>
+  </div>
+
+  <hr>
+
+  <h1 style="text-align:center; color:#222;">💥 집에 가고 싶다면, 지금 당장 집중력(Home gravity) Club에 가입하라 💥</h1>
+
+  <form>
+    <fieldset>
+      <legend>가입자 정보</legend>
+      <table>
+        <tr>
+          <td><label for="name">이름</label></td>
+          <td><input id="name" name="name" type="text"></td>
+        </tr>
+        <tr>
+          <td>성별</td>
+          <td>
+            <input id="man" type="radio" name="gender" value="m">
+            <label for="man">남자</label>
+            <input id="woman" type="radio" name="gender" value="w">
+            <label for="woman">여자</label>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <input type="button" value="가입" onclick="showJoinAlert()">
+    </fieldset>
+  </form>
+
+  <footer>
+    <p>ⓒ 2025 집중력 Club. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
